@@ -1,0 +1,71 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Kefir</title>
+        <meta charset='utf-8'>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/theme.css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+            <div class="container">
+                <img src="Hogwarts.png">
+                <div class="row">
+                    
+                    <h1><b>Welcome to <a href ='https://en.wikipedia.org/wiki/Hogwarts'>Hogwarts!</a></b></h1>
+                    <div class="col-md-3">
+
+                        <h3> please, enter your name <br>in <a href ='#' class='family_1'>form</a><br> for to get your faculties page</h3>
+
+                        <form action="#" method="get">
+                            <div class="form-group" >
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Type your name here..." autocomplete="off"/>
+                                <button type="button" name="ok" id="ok-button" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                        <div id="message"></div>
+                    </div>
+                    <div class="col-md-7">
+                        <h3> If you are a new member,please give us an information about your family <br>in <a href ='#' class='family_2'>form below.</a><br>Please, give us also to know about what facultie you prefer to stay with.</h3>
+
+                        <form action="#" method="get">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="nname" placeholder="Type your name here..." autocomplete="off"/>
+                                <select class="form-control" id="choose">
+                                <option>Gryffindor</option>
+                                <option>Hufflepuff</option>
+                                <option>Ravenclaw</option>
+                                <option>Slytherin</option>
+                            </select>
+                                <button type="button" name="ok" id="ook-button" class="btn btn-primary">Go</button>
+                            </div>
+                        </form>
+                        <div id="mmessage"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div id='congratulation'></div>
+            <div id="invitation"></div>
+        
+        <script id="congratulation-template" type="text/x-handlebars-template">
+        <div class="col-md-5">
+            <b>Welcome, {{name}}! Here you can find a page of<a href="#" class="hhome"> "{{choose}}"</a></b>
+            </div>
+        </script>
+        
+        <script id="invitation-template" type="text/x-handlebars-template">
+<div class="col-md-5">
+    <b>Welcome, {{nname}}. We invite you to the <a href="#" class="home">facultet  "{{choose}}" </a>
+           </b>
+            </div>
+        </script>
+
+        <script src="jquery-3.2.0.min.js"></script>
+        <script src="handlebars-v4.0.5.js"></script>
+        <script src="parse.min.js"></script>
+        <script src="index.js"></script>
+        <script src="database.js"></script>
+    </body>
+</html>
